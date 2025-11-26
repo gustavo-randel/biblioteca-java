@@ -1,4 +1,4 @@
-package trabalhoPOO;
+package org.ucsal.poo.pf20252.br;
 
 public class Livro extends Publicacao{
 	
@@ -7,6 +7,8 @@ public class Livro extends Publicacao{
 	 public Livro(String titulo, String autor, int ano,int isbn){
 		super(titulo, autor, ano);
 		this.isbn = isbn;
+		
+		
 	}
 
 	public int getIsbn() {

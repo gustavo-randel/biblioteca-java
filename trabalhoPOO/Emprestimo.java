@@ -1,13 +1,13 @@
-package trabalhoPOO;
+package org.ucsal.poo.pf20252.br;
 
 public class Emprestimo {
 	
-	protected String dataEmprestimo;
-	protected String dataDevolucao;
+	protected int dataEmprestimo;
+	protected int dataDevolucao;
 	protected boolean status;
 	
 	
-	public Emprestimo(String dataEmprestimo, String dataDevolucao, boolean status) {
+	public Emprestimo(int dataEmprestimo, int dataDevolucao, boolean status) {
 		
 		this.dataEmprestimo = dataEmprestimo;
 		this.dataDevolucao = dataDevolucao;
@@ -16,22 +16,22 @@ public class Emprestimo {
 	}
 
 
-	public String getDataEmprestimo() {
+	public int getDataEmprestimo() {
 		return dataEmprestimo;
 	}
 
 
-	public void setDataEmprestimo(String dataEmprestimo) {
+	public void setDataEmprestimo(int dataEmprestimo) {
 		this.dataEmprestimo = dataEmprestimo;
 	}
 
 
-	public String getDataDevolucao() {
+	public int getDataDevolucao() {
 		return dataDevolucao;
 	}
 
 
-	public void setDataDevolucao(String dataDevolucao) {
+	public void setDataDevolucao(int dataDevolucao) {
 		this.dataDevolucao = dataDevolucao;
 	}
 

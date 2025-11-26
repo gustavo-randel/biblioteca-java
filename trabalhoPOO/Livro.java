@@ -8,4 +8,13 @@ public class Livro extends Publicacao{
 		super(titulo, autor, ano);
 		this.isbn = isbn;
 	}
+
+	public int getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(int isbn) {
+		this.isbn = isbn;
+	}
+	 
 }

@@ -12,6 +12,36 @@ public class Emprestimo {
 		this.dataEmprestimo = dataEmprestimo;
 		this.dataDevolucao = dataDevolucao;
 		this.status = status;
-		
+	
+	}
+
+
+	public String getDataEmprestimo() {
+		return dataEmprestimo;
+	}
+
+
+	public void setDataEmprestimo(String dataEmprestimo) {
+		this.dataEmprestimo = dataEmprestimo;
+	}
+
+
+	public String getDataDevolucao() {
+		return dataDevolucao;
+	}
+
+
+	public void setDataDevolucao(String dataDevolucao) {
+		this.dataDevolucao = dataDevolucao;
+	}
+
+
+	public boolean isStatus() {
+		return status;
+	}
+
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 }

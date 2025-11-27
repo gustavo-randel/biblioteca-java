@@ -1,47 +1,40 @@
 package org.ucsal.poo.pf20252.br;
 
 public class Emprestimo {
-	
-	protected int dataEmprestimo;
-	protected int dataDevolucao;
-	protected boolean status;
-	
-	
-	public Emprestimo(int dataEmprestimo, int dataDevolucao, boolean status) {
-		
-		this.dataEmprestimo = dataEmprestimo;
-		this.dataDevolucao = dataDevolucao;
-		this.status = status;
-	
-	}
 
+    private Usuario usuario;
+    private Livro livro;
+    private int dataEmprestimo;
+    private Integer dataDevolucao;
+    private boolean ativo;
 
-	public int getDataEmprestimo() {
-		return dataEmprestimo;
-	}
+    public Emprestimo(Usuario usuario, Livro livro, int dataEmprestimo) {
+        this.usuario = usuario;
+        this.livro = livro;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = null;
+        this.ativo = true;
+    }
 
+    public Usuario getUsuario() { return usuario; }
+    public Livro getLivro() { return livro; }
 
-	public void setDataEmprestimo(int dataEmprestimo) {
-		this.dataEmprestimo = dataEmprestimo;
-	}
+    public int getDataEmprestimo() { return dataEmprestimo; }
 
+    public Integer getDataDevolucao() { return dataDevolucao; }
+    public void setDataDevolucao(int dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+        this.ativo = false;
+    }
 
-	public int getDataDevolucao() {
-		return dataDevolucao;
-	}
+    public boolean isAtivo() { return ativo; }
 
-
-	public void setDataDevolucao(int dataDevolucao) {
-		this.dataDevolucao = dataDevolucao;
-	}
-
-
-	public boolean isStatus() {
-		return status;
-	}
-
-
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+    @Override
+    public String toString() {
+        return "Emprestimo{ usuario=" + usuario.getNome() +
+               ", livro=" + livro.getTitulo() +
+               ", dataEmp=" + dataEmprestimo +
+               ", dataDev=" + (dataDevolucao == null ? "-" : dataDevolucao) +
+               ", ativo=" + ativo + " }";
+    }
 }
